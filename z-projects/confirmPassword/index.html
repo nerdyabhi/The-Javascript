@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<body>
+
+   
+    <div class="outer-box">
+        <div class="inner-box">
+
+            <header class="signup-header">
+                <h1>Confirm Password</h1>
+                <h3>Mein toh javascript hoon bhayy 💅 </h3>
+            </header>
+
+            <main class="signup-body">
+                <form action="#">
+                 
+                    <p>
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="abhi@abc.ocm">
+                    </p>
+
+
+                    <p>
+                        <label for="cnfPass">confirm Password</label>
+                        <input type="password" id="cnfPass" onchange="checkPass()" placeholder="atleast 8 characters">
+
+                    </p>
+                    <input  onclick="cnfPass()" type="submit" value="Create Account">
+                </form>
+
+               
+            </main>
+
+        </div>
+        <div class="circle1"></div>
+    <div class="circle2"></div>
+    </div>
+
+    
+</body>
+    <script>
+        function checkPass() {
+            const pass1 = document.getElementById("password").value;
+            const pass2 = document.getElementById("cnfPass").value;
+            const cnfPassInput = document.getElementById("cnfPass");
+
+            if(pass1 !== pass2){
+               
+                document.getElementById("cnfPass").style.borderColor = "red";
+
+                const warning = document.createElement("span");
+                warning.id = "password-warning";
+                warning.innerText = "Passwords don't match";
+                warning.style.color = "red";
+
+                if(document.getElementById("password-warning") == null) cnfPassInput.parentNode.appendChild(warning);
+
+            }
+
+            else{
+                document.getElementById("cnfPass").style.borderColor = "black";
+                document.getElementById("password-warning").remove();
+            }
+        }
+
+        function cnfPass() {
+            const pass1 = document.getElementById("password").value;
+            const pass2 = document.getElementById("cnfPass").value;
+            
+            if(pass1 !== pass2)
+            {
+                alert("the passwords aren't matching");
+            }
+        }
+    </script>
+</html>

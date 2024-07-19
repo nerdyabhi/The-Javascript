@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+    <style>
+        .dark-mode
+        {
+            background-color: #212121;
+            color: white;
+        }
+
+        h2{
+            transition: all 200ms ease-out;
+        }
+    </style>
+<body>
+
+    <button id="darkMode" onclick="toggleDark()">Dark Mode</button>
+    
+    <h2  class="heading" onclick="appendIt()" id = "h1">Abhi will append : </h2>
+
+    <h3 style="cursor: pointer;" onclick="changeName()" class="heading">Hey i am <span id="devName">Abhi Sharma</span></h3>
+
+
+</body>
+<script>
+    function changeName()
+    {
+       const x = document.getElementById("devName");
+       const text  = x.innerText;
+
+       if(text == "Abhi Sharma")
+       {
+            x.innerText = "Mahi Sharma";
+            x.style.color = "green";
+       }
+
+       else{
+         x.innerHTML = "Abhi Sharma";
+         x.style.color = "red";
+
+        }
+    }
+
+    function appendIt() {
+       const h1 =  document.getElementById("h1");
+       h1.append("Abhi Sharma ");
+        
+    }
+
+    function toggleDark() {
+        const ele = document.getElementById("darkMode");
+        if(ele.innerText == "Dark Mode") ele.innerText = "Light Mode";
+        else ele.innerText = "Dark Mode";
+
+
+        document.querySelector("body").setAttribute("class" , "dark-mode");
+
+    }
+    
+</script>
+</html>
