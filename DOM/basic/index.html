@@ -55,12 +55,16 @@
 
     function toggleDark() {
         const ele = document.getElementById("darkMode");
-        if(ele.innerText == "Dark Mode") ele.innerText = "Light Mode";
-        else ele.innerText = "Dark Mode";
-
-
-        document.querySelector("body").setAttribute("class" , "dark-mode");
-
+        if(ele.innerText == "Dark Mode") 
+        {
+            ele.innerText = "Light Mode";
+            document.querySelector("body").setAttribute("class" , "dark-mode");
+        }
+        else
+        {
+            document.querySelector("body").removeAttribute("class" , "dark-mode");
+            ele.innerText = "Dark Mode";
+        } 
     }
     
 </script>

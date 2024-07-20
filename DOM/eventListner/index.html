@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listners Js</title>
+</head>
+<body>
+    
+    <h1 id="h1">Hey i am a heading</h1>
+
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sapiente quasi culpa nemo commodi magnam at a tempore dolorem odio.</p>
+
+     
+</body>
+
+<script>
+    const h1 = document.getElementById("h1");
+
+    function random()
+    {
+        return Math.floor(Math.random() * 255 + 1);
+    }
+    
+    const headFunction = () => {
+        const body = document.querySelector("body");
+        body.style.backgroundColor = `rgb(${random()} , ${random()} , ${random()})`
+        body.style.color = "white";
+
+        h1.innerText = "I'll change colors just like your ex";
+
+    }
+    h1.addEventListener("click" , headFunction);
+</script>
+</html>
