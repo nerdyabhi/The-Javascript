@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+ul{
+    list-style-type: none;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px 0 0 3px;
+}
+
+#addTask {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+#addTask:hover {
+    background-color: #45a049;
+}
+
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#taskList li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}
+
+/* Custom checkbox styling */
+#taskList li input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4CAF50;
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 10000;
+    position: relative;
+}
+
+#taskList li input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+}
+
+#taskList li input[type="checkbox"]:checked::after {
+    content: '\2714';
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#taskList li label {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+#taskList li input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+    color: #888;
+}
+
+button:hover{
+    cursor: pointer;
+}
+input:focus{
+    outline: none;
+}
+
+.trash-can
+{
+    padding: 10px;
+    border:none;
+    background:transparent;
+    color: black; 
+    transition: all 0.2s ease-in-out;
+    
+}
+
+.trash-can:hover
+{
+    color: red;
+}
