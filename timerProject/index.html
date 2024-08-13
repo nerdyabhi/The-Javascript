@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slow Motion Timer</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #222;
+      }
+      .container {
+        text-align: center;
+        background-color: black;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgb(0, 0, 215);
+      }
+      .clock {
+        color: whitesmoke;
+        font-size: 4rem;
+        margin-bottom: 1rem;
+      }
+      .controls {
+        margin-bottom: 1rem;
+      }
+      button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        margin: 0 0.5rem;
+      }
+      .speed-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      input[type='range'] {
+        width: 200px;
+        margin: 0 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="clock" id="clock">00:00:00</div>
+    </div>
+  </body>
+
+  <script>
+    function updateTime() {
+      document.getElementById('clock');
+      clock.innerText = new Date().toLocaleTimeString();
+    }
+    setInterval(updateTime , 1000);
+  </script>
+</html>
