@@ -16,3 +16,6 @@ abhi.heyAbhi();
 Array.prototype.getAbhi = function () {
   console.log(`Aaapne Bulayaa ${this}`);
 };
+
+abhi.getAbhi();
+abhi2.getAbhi();

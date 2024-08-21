@@ -1,5 +1,5 @@
 //* ==============================
-//* LocalStorage
+//* LocalStorage ( Notes By Thappa Technical )
 //* ==============================
 
 //? The localStorage object allows you to save key/value pairs in the browser.
